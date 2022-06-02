@@ -18,7 +18,7 @@ const imgList = galleryItems.map(({preview,description,original})=> `<a class="g
   });
 
   function bigImgGallery (event) {
-    if (e.target.nodeName !== "IMG") {
+    if (event.target.nodeName !== "IMG") {
         return;
       }
 }
