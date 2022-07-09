@@ -1,10 +1,9 @@
+// В файле gallery-items.js есть массив galleryItems, который содержит объекты с информацией о изображениях: маленькое (превью), оригинальное (большое) и описание.
+// Создай галерею с возможностью клика по её элементам и просмотра полноразмерного изображения в модальном окне.
+
 import { galleryItems } from './gallery-items.js';
-// Change code below this line
-
-
 
 const galleryWrapper = document.querySelector('.gallery');
-
 
 const imgList = galleryItems.map(({preview,description,original})=> `<div class="gallery__item">
 <a class="gallery__link" href="large-image.jpg">
@@ -17,10 +16,7 @@ const imgList = galleryItems.map(({preview,description,original})=> `<div class=
 </a>
 </div>`).join('');
 
-
-
 galleryWrapper.insertAdjacentHTML('beforeend',imgList);
-
 
 galleryWrapper.addEventListener('click',gettingBigImage);
 
